@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
-import { LibUiComponent } from './lib-ui.component';
 import { HelloWorldComponent } from './hello-world/hello-world.component';
 
 @NgModule({
-  declarations: [LibUiComponent, HelloWorldComponent],
+  declarations: [HelloWorldComponent],
   imports: [
   ],
-  exports: [LibUiComponent, HelloWorldComponent]
+  exports: [HelloWorldComponent]
 })
 export class LibUiModule { }
