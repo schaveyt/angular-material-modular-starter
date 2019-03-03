@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "lib-ui": [
+        "projects/lib-ui/src/public_api"
+      ],
+      "lib-ui/*": [
+        "projects/lib-ui/src/*"
+      ]
+    }
   }
 }
