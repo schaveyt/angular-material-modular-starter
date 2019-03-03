@@ -45,7 +45,7 @@ ng g c my-component-name --project lib-ui
 ## Added a material 'consolidated' Angular Module for the ClientApp
 
 ~~~bash
-1 ng g module material
+1 ng g module material --project client-app
 ~~~
 
 - Update client-app's AppModule's imports to utilize the local Material consolidated module.
@@ -57,7 +57,7 @@ This component is going to be an entry point for our entire application, so letâ
 inside the app.component.ts
 
 ~~~bash
-ng g component layout
+ng g component layout --project client-app
 ~~~
 
 
@@ -74,5 +74,15 @@ npm install @angular/flex-layout â€“save
 
 - Register it inside the app.module.ts
 - Updated the LayoutComponent's html (see it html comments)
-- Update the LayoutComponent's css (see its html commetns)
+- Update the LayoutComponent's css (see its html comments)
+
+## Added a HomeComponent
+
+~~~bash
+ng g component layout --project client-app
+~~~
+
+- Added a Material Tab Control to the project. This requires updates to:
+   - The Material Module's import and export
+- Added an example event listener when switching tabs.
 
