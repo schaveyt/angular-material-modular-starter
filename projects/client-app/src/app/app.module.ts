@@ -7,6 +7,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {LibUiModule} from 'lib-ui';
 
 import { AppComponent } from './app.component';
+import { MaterialModule } from './material/material.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    LibUiModule
+    LibUiModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

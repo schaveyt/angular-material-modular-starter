@@ -42,8 +42,10 @@ To add a component to the __lib-ui__ library
 ng g c my-component-name --project lib-ui
 ~~~
 
-## Add a Core Library
+## Added a material 'consolidated' Angular Module for the ClientApp
 
 ~~~bash
-ng
+1 ng g module material
 ~~~
+
+- Update client-app's AppModule's imports to utilize the local Material consolidated module.
