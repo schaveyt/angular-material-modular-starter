@@ -49,3 +49,13 @@ ng g c my-component-name --project lib-ui
 ~~~
 
 - Update client-app's AppModule's imports to utilize the local Material consolidated module.
+
+
+## Creating the Layout Component
+
+This component is going to be an entry point for our entire application, so let’s create it and import its selector
+inside the app.component.ts
+
+~~~bash
+ng g component layout
+~~~

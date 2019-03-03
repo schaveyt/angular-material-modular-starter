@@ -8,11 +8,13 @@ import {LibUiModule} from 'lib-ui';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material/material.module';
+import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LayoutComponent
   ],
   imports: [
     BrowserModule,
