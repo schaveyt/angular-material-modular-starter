@@ -59,3 +59,20 @@ inside the app.component.ts
 ~~~bash
 ng g component layout
 ~~~
+
+
+## Angular Flex Layout
+
+Before we modify the HTML component of the new LayoutComponent, we need to install one more library: \
+@angular/flex-layout \
+
+This library will help us create a responsive application. So, let’s install it:
+
+~~~bash
+npm install @angular/flex-layout –save
+~~~
+
+- Register it inside the app.module.ts
+- Updated the LayoutComponent's html (see it html comments)
+- Update the LayoutComponent's css (see its html commetns)
+
