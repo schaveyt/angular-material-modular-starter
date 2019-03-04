@@ -2,3 +2,9 @@
 
 /* import default angular material.io theme */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* for sidenav to take a whole page */
+html, body { 
+    margin: 0;
+    height: 100%;
+}
