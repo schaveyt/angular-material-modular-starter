@@ -14,7 +14,8 @@ import { MaterialModule } from './material/material.module';
 import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { RoutingModule } from './routing/routing.module';
-import { HeaderComponent } from './naviagation/header/header.component';
+import { HeaderComponent } from './navigation/header/header.component';
+import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { HeaderComponent } from './naviagation/header/header.component';
     AppComponent,
     LayoutComponent,
     HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidenavListComponent
   ],
   imports: [
     BrowserModule,

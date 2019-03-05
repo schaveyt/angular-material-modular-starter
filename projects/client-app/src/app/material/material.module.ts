@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {
   MatButtonModule,
   MatIconModule,
+  MatListModule,
   MatSidenavModule,
   MatTabsModule,
   MatToolbarModule } from '@angular/material';
@@ -15,6 +16,7 @@ import {
   exports: [
     MatButtonModule,
     MatIconModule,
+    MatListModule,
     MatSidenavModule,
     MatTabsModule,
     MatToolbarModule
