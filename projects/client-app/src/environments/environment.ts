@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  urlBaseAddress: 'http://www.ang-material-account-owner.com'
+  urlBaseAddress: 'http://localhost:5000/items'
 };
 
 /*
