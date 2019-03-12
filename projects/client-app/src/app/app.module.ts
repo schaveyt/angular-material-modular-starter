@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 // Angular Material imports
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -7,15 +8,25 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 // Angular Flex Layout
 import { FlexLayoutModule } from '@angular/flex-layout';
 
+
+// Custom Modules
+//
+import { MaterialModule } from './modules/material/material.module';
+import { RoutingModule } from './modules/routing/routing.module';
+import { TablesModule } from './modules/tables/tables.module';
+
+// External Modules
+//
 import {LibUiModule} from 'lib-ui';
 
+// Custom Components
+//
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material/material.module';
-import { LayoutComponent } from './layout/layout.component';
-import { HomeComponent } from './home/home.component';
-import { RoutingModule } from './routing/routing.module';
-import { HeaderComponent } from './navigation/header/header.component';
-import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
+import { LayoutComponent } from './components/layout/layout.component';
+import { HomeComponent } from './components/home/home.component';
+import { HeaderComponent } from './components/nav/header/header.component';
+import { SidenavListComponent } from './components/nav/sidenav-list/sidenav-list.component';
+
 
 
 @NgModule({
@@ -29,10 +40,12 @@ import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.com
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     LibUiModule,
     MaterialModule,
     FlexLayoutModule,
-    RoutingModule
+    RoutingModule,
+    TablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

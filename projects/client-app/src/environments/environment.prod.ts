@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  urlBaseAddress: 'http://www.some-production-url.com'
 };

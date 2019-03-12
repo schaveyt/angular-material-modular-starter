@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from '../home/home.component';
+import { HomeComponent } from '../../components/home/home.component';
+
+import { TablesModule } from '../tables/tables.module';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: '**', redirectTo: '/home', pathMatch: 'full' }, // this routes all things to /home
+  { path: 'table', loadChildren: () => TablesModule }, // lazy load the module :-)
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
