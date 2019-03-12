@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidenav-list',
@@ -8,13 +9,24 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class SidenavListComponent implements OnInit {
 
   @Output() sidenavClose = new EventEmitter();
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
   onSidenavClose() {
     this.sidenavClose.emit();
+  }
+
+  onClickClientSideTable() {
+    this.router.navigate(['table', 'basic-table']);
+    this.onSidenavClose();
+  }
+
+  onClickServerSideTable() {
+    this.router.navigate(['table', 'server-table']);
+    this.onSidenavClose();
   }
 
 }

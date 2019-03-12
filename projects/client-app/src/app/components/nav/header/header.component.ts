@@ -1,4 +1,5 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -18,4 +19,11 @@ export class HeaderComponent implements OnInit {
     this.sidenavToggle.emit();
   }
 
+  onClickClientSideTable() {
+    this.router.navigate(['table', 'basic-table']);
+  }
+
+  onClickServerSideTable() {
+    this.router.navigate(['table', 'server-table']);
+  }
 }

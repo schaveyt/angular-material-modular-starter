@@ -1,18 +1,19 @@
-import { Component, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, AfterViewInit, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { RepositoryService } from '../services/repository.service';
 import { merge, of } from 'rxjs';
 import { startWith, switchMap, map, catchError } from 'rxjs/operators';
+import { ElementTableItem } from '../entities/element-table-item.model';
 
 @Component({
   selector: 'app-basic-table',
   templateUrl: './basic-table.component.html',
   styleUrls: ['./basic-table.component.css']
 })
-export class BasicTableComponent implements AfterViewInit {
+export class BasicTableComponent implements OnInit, AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-  dataSource = new MatTableDataSource();
+  dataSource = new MatTableDataSource<ElementTableItem>();
   isLoadingResults: boolean;
   isRateLimitReached: boolean;
   resultsLength: any;
@@ -24,33 +25,14 @@ export class BasicTableComponent implements AfterViewInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['id', 'text'];
 
-  ngAfterViewInit() {
-    // If the user changes the sort order, reset back to the first page.
-    this.sort.sortChange.subscribe(() => this.paginator.pageIndex = 0);
+  ngOnInit() {
+    this.repositoryService.getAllElements().subscribe(res => {
+      this.dataSource.data = res as ElementTableItem[];
+    });
+  }
 
-    merge(this.sort.sortChange, this.paginator.page)
-      .pipe(
-        startWith({}),
-        switchMap(() => {
-          this.isLoadingResults = true;
-          return this.repositoryService.findElements(
-            this.sort.active, this.sort.direction, this.paginator.pageIndex, this.paginator.pageSize);
-        }),
-        map(data => {
-          // Flip flag to show that loading has finished.
-          this.isLoadingResults = false;
-          this.isRateLimitReached = false;
-          this.resultsLength = 300; // Array.isArray(data) ? data.length : data.total_count;
-
-          return Array.isArray(data) ? data : data.items;
-        }),
-        catchError(() => {
-          this.isLoadingResults = false;
-          // Catch if the GitHub API has reached its rate limit. Return empty data.
-          this.isRateLimitReached = true;
-          return of([]);
-        })
-      ).subscribe(data => this.dataSource.data = data);
-
+  ngAfterViewInit(): void {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
   }
 }

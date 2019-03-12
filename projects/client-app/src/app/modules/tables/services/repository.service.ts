@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { environment } from '../../../../environments/environment';
 import { Observable } from 'rxjs';
 import { ElementTableApi } from '../entities/element-table-api.model';
+import { ElementTableItem } from '../entities/element-table-item.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +11,10 @@ import { ElementTableApi } from '../entities/element-table-api.model';
 export class RepositoryService {
   readonly payloadStr = 'payload';
   constructor(private http: HttpClient) {}
+
+  public getAllElements() {
+    return this.http.get<ElementTableItem[]>(environment.urlBaseAddress);
+  }
 
   public findElements(
     sortColName = '',
