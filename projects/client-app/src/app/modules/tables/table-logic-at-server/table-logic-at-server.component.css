@@ -1,29 +1,27 @@
 .full-width-table {
-    width: 100%;
-  }
-  
-  .sm-height-table {
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    max-height: 600px;
-  }
-  
-  .table-loading-shade {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 56px;
-    right: 0;
-    background: rgba(0, 0, 0, 0.15);
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  /* Column Widths */
-  .mat-column-id {
-    min-width: 100px;
-  }
+  width: 100%;
+}
+
+.table-container {
+  overflow: auto;
+  max-height: 600px;
+}
+
+/* Column Widths */
+.mat-column-id {
+  flex: 0 0 25% !important;
+  min-width: 100px !important;
+}
+
+.table-loading-shade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 56px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

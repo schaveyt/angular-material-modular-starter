@@ -22,7 +22,7 @@ export class TableLogicAtServerComponent implements AfterViewInit {
   }
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'text'];
+  displayedColumns = ['id', 'text', 'status'];
 
   ngAfterViewInit() {
     // If the user changes the sort order, reset back to the first page.

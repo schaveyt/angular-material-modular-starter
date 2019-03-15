@@ -23,7 +23,7 @@ export class BasicTableComponent implements OnInit, AfterViewInit {
   }
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'text'];
+  displayedColumns = ['id', 'text', 'status'];
 
   ngOnInit() {
     this.repositoryService.getAllElements().subscribe(res => {
