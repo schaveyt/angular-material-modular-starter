@@ -1,0 +1,30 @@
+.full-width-table {
+  width: 100%;
+}
+
+.table-container {
+  /*overflow: auto;
+  max-height: 600px;*/
+}
+
+.cdk-drag-preview {
+  cursor: move;
+}
+
+.cdk-drag-placeholder > td {
+  background-color: rgba(77, 166, 201, .2);
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-color: rgb(44, 41, 41, .5);
+}
+
+/* Column Widths */
+.mat-column-id {
+  flex: 0 0 25% !important;
+  min-width: 100px !important;
+}
+
+.mat-column-position {
+  flex: 0 0 15% !important;
+  min-width: 60px !important;
+}

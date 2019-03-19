@@ -26,4 +26,8 @@ export class HeaderComponent implements OnInit {
   onClickServerSideTable() {
     this.router.navigate(['table', 'server-table']);
   }
+
+  onClickClientSideTableDnd() {
+    this.router.navigate(['table', 'basic-dnd-table']);
+  }
 }

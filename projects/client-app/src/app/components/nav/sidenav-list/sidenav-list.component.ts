@@ -29,4 +29,9 @@ export class SidenavListComponent implements OnInit {
     this.onSidenavClose();
   }
 
+  onClickClientSideTableDnd() {
+    this.router.navigate(['table', 'basic-dnd-table']);
+    this.onSidenavClose();
+  }
+
 }
