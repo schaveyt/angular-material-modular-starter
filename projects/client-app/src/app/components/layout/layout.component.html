@@ -15,8 +15,7 @@ With the <ng-content> element, we are using angular content projection.
 We have two more classes: layout-wrapper and flex-wrapper, so let’s implement them inside the layout.component.css file
 
 -->
-<div class="div-debug" style="height: 100%">
-<div class="comp-badge">Layout</div>
+<div style="height: 100%">
 <div fxLayout="row wrap" fxLayoutAlign="center center" class="layout-wrapper">
   <div fxFlex="80%" fxFlex.lt-md="100%" class="flex-wrapper">
       <ng-content></ng-content>
