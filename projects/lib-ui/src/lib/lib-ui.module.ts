@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
-import { HelloWorldComponent } from './hello-world/hello-world.component';
+import { CommonModule } from '@angular/common';
+import { MainDrawerComponent } from './panels/main-drawer/main-drawer.component';
+import { MatToolbarModule } from '@angular/material';
 
 @NgModule({
-  declarations: [HelloWorldComponent],
-  imports: [
+  declarations: [
+    MainDrawerComponent
   ],
-  exports: [HelloWorldComponent]
+  imports: [
+    CommonModule,
+    MatToolbarModule
+  ],
+  exports: [
+    MainDrawerComponent
+  ]
 })
 export class LibUiModule { }

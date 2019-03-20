@@ -22,20 +22,11 @@ import {LibUiModule} from 'lib-ui';
 // Custom Components
 //
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './components/layout/layout.component';
-import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/nav/header/header.component';
-import { SidenavListComponent } from './components/nav/sidenav-list/sidenav-list.component';
-
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LayoutComponent,
-    HomeComponent,
-    HeaderComponent,
-    SidenavListComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,

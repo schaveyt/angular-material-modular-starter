@@ -1,11 +1,20 @@
-mat-sidenav-container, mat-sidenav-content, mat-sidenav {
-    height: 100%;
+.app-main-container {
+  position: absolute;
+  top: 0;
+  bottom: 25px;
+  left: 0;
+  right: 0;
 }
- 
-mat-sidenav {
-    width: 250px;
+
+.app-main-content {
+  margin: 10px;
 }
- 
-main {
-    padding: 10px;
+
+.app-main-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px;
+  font-size: 10px;
 }
